@@ -3,25 +3,49 @@
   <head>
     <title>Fizz Buzz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
-	  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css"> -->
-    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
     <meta charset="utf-8">
     <script src="assets/js/calc.js"></script>
     <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="custom.css">
   </head>
   <body>
+
     <div class="container">
     <h1 class="center-align full-width center-align blue-text text-darken-2">Fizz Buzz</h1>
 
-    <input class="input center-align" type="text" id="number" placeholder="Let's play! Enter an integer.">
+    <div class="container center-align">
+    <div class="container center-align">
+    <div class="container center-align">
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="full-width collapsible-header pink darken-1 white-text center-align">
+              <h5> --How to play fizz buzz-- </h5>
+          </div>
+          <div class="collapsible-body blue darken-2 white-text">
+            <span><p>Enter an integer below.</p>
+            <p>When the number is divisible by 3, the program returns 'fizz'.</p>
+            <p>When the number is divisible by 5, it returns 'buzz'.</p>
+            <p>When the number is divisible by 15, it will return 'fizz buzz'.</p>
+            <p>Otherwise the number you entered will be returned.</p></span></div>
+        </li>
+      </ul>
+
+        <div class="input-field col s6">
+          <input class="center-align" placeholder="Let's play! Enter an integer." id="number" type="text">
+        </div>
+    </div>
+    </div>
+    </div>
+
+
     <p class="center-align">
-    <input class="btn waves-effect pink darken-2 btn-large waves-light z-depth-2" type="button" id="calculate" value="Play">
+    <input class="btn waves-effect pink darken-1 btn-large waves-light z-depth-2" type="button" id="calculate" value="Play">
     </p>
 
     <div class="container">
@@ -29,7 +53,7 @@
         <div class="col s6 offset-s3 valign">
           <div class="card blue darken-2">
             <div class="card-content white-text">
-              <span class="card-title center-align">Your Result:</span>
+              <span class="card-title center-align" id="result">Your Result:</span>
                 <p class="center-align">
                   <span class="center-align" id="display_message"></span>
                 </p>
@@ -44,7 +68,6 @@
       var fizzbuzz_calc = new Calc
       $('#calculate').click(function () {
         $('#display_message').html('');
-          // if number ==='string'
             var number_input = parseFloat($('#number').val());
             var fizzbuzz_output = fizzbuzz_calc.fizzbuzz(number_input)
             $('#display_message').html(fizzbuzz_output);
