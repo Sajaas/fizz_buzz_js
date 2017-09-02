@@ -3,30 +3,30 @@ describe('calc_UI - index.html', function() {
         jasmine.getFixtures().fixturesPath = '.';
         loadFixtures('index.html');
         $.holdReady(false);
-        $('#number').val(90);
+    });
+
+    it("displays 1 if number is 1", function() {
+        $('#number').val(1);
         $('#calculate').trigger('click');
+        expect($('#display_message').text()).toBe('');
     });
 
-    it("displays number", function() {
-        expect($('#display_value').text()).toBe('Your BMI is 26.01');
-    });
-    it("displays BMI message (metric)", function() {
-        expect($('#display_message').text()).toBe('and you are overweight.');
+    it("displays fizz if number is divisible by 3", function() {
+        expect($('#display_message').text()).toBe('');
     });
 
-    it("displays BMI value (imperial)", function() {
-        expect($('#display_value_2').text()).toBe('Your BMI is 26.01');
+    it("displays buzz if number is divisible by 5", function() {
+        expect($('#display_message').text()).toBe('');
     });
 
-    it("displays BMI message (imperial)", function() {
-        expect($('#display_message_2').text()).toBe('and you are overweight.');
+    it("displays fizz buzz if number is divisible by 15", function() {
+        expect($('#display_message').text()).toBe('');
     });
 
     it("displays error message if input isn't correct", function() {
-        $('#weight').val('0');
-        $('#height').val('0');
+        $('#number').val('s');
         $('#calculate').trigger('click');
-      expect($('#display_error').text()).toBe('Do you want to be undefined, or what? Enter your real values please!')
+      expect($('#display_message').text()).toBe('')
     });
 
 });
