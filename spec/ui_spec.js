@@ -1,7 +1,7 @@
-describe('calc_UI - index.html', function() {
+describe('CALC - index.html', function() {
     beforeEach(function() {
-        jasmine.getFixtures().fixturesPath = 'spec/fixures/ui_specs.js';
-        loadFixtures('./index.html');
+        jasmine.getFixtures().fixturesPath = '.';
+        loadFixtures('index.html');
         $.holdReady(false);
     });
 
