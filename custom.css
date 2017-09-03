@@ -4,12 +4,6 @@
   box-shadow: 0 1px 0 0 white !important;
 }
 
-  #collapsible {
-    outline: none;
-    border-radius: 0;
-
-  }
-
   #result {
     padding-bottom: 30px;
   }
