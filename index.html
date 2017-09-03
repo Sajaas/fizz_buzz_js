@@ -14,10 +14,10 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="custom.css">
   </head>
-  <body>
+  <body background="bubbles.jpg">
 
     <div class="container">
-    <h1 class="center-align full-width center-align blue-text text-darken-2">Fizz Buzz</h1>
+    <h1 class="center-align full-width center-align white-text">Fizz Buzz</h1>
 
     <div class="container">
     <div class="container">
@@ -37,7 +37,7 @@
         </li>
       </ul>
 
-        <div class="input-field col s6">
+        <div class="input-field col s6 white-text">
           <input class="center-align" placeholder="Let's play! Enter an integer." id="number" type="text">
         </div>
     </div>
@@ -66,6 +66,7 @@
 
   <script type="text/javascript">
     $(document).ready(function () {
+      $("#number").focus()
       var fizzbuzz_calc = new Calc
       $('#calculate').click(function () {
         $('#display_message').html('');
@@ -76,6 +77,7 @@
     $("#number").keyup(function(event){
       if(event.keyCode == 13){
         $("#calculate").click();
+        $("#number").val('');
         };
       });
     });
