@@ -1,0 +1,69 @@
+  <body>
+
+    <div class="container">
+    <h1 class="center-align full-width center-align blue-text text-darken-2">Fizz Buzz</h1>
+
+    <div class="container">
+    <div class="container">
+    <div class="container">
+
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header pink darken-1 white-text full-width">
+            Press for instructions on how to play
+          </div>
+          <div class="collapsible-body blue darken-2 white-text">
+            <span><p>Enter an integer below.</p>
+            <p>When the number is divisible by 3, the program returns 'fizz'.</p>
+            <p>When the number is divisible by 5, it returns 'buzz'.</p>
+            <p>When the number is divisible by 15, it will return 'fizz buzz'.</p>
+            <p>Otherwise the number you entered will be returned.</p></span></div>
+        </li>
+      </ul>
+
+        <div class="input-field col s6">
+          <input class="center-align" placeholder="Let's play! Enter an integer." id="number" type="text">
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    <p class="center-align">
+    <input class="btn waves-effect pink darken-1 btn-large waves-light z-depth-2" type="button" id="calculate" value="Play">
+    </p>
+
+    <div class="container">
+      <div class="row valign-wrapper">
+        <div class="col s6 offset-s3 valign">
+          <div class="card blue darken-2">
+            <div class="card-content white-text">
+              <span class="card-title center-align" id="result">Your Result:</span>
+                <p class="center-align">
+                  <span class="center-align" id="display_message"></span>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var fizzbuzz_calc = new Calc
+      $('#calculate').click(function () {
+        $('#display_message').html('');
+            var number_input = parseFloat($('#number').val());
+            var fizzbuzz_output = fizzbuzz_calc.fizzbuzz(number_input)
+            $('#display_message').html(fizzbuzz_output);
+      });
+    $("#number").keyup(function(event){
+      if(event.keyCode == 13){
+        $("#calculate").click();
+        };
+      });
+    });
+  </script>
+
+  </div>
+  </body>

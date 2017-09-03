@@ -1,6 +1,6 @@
 describe('CALC - index.html', function() {
     beforeEach(function() {
-        jasmine.getFixtures().fixturesPath = '.';
+        jasmine.getFixtures().fixturesPath = 'base/spec/fixtures';
         loadFixtures('index.html');
         $.holdReady(false);
     });
