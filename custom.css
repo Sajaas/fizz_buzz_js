@@ -4,6 +4,17 @@
   box-shadow: 0 1px 0 0 white !important;
 }
 
+  #collapsible {
+    outline: none;
+    border-radius: 0;
+
+  }
+
   #result {
     padding-bottom: 30px;
+  }
+
+  #display_message {
+    font-size: 400%;
+    text-shadow: 2px 2px #d81b60;
   }
