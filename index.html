@@ -59,17 +59,23 @@
         </div>
       </div>
     </div>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $("#number").focus()
-      var fizzbuzz_calc = new Calc
-      $('#calculate').click(function () {
-        $('#display_message').html('');
-            var number_input = parseFloat($('#number').val());
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var fizzbuzz_calc = new Calc
+        $('#calculate').click(function () {
+          $('#display_message').html('');
+          var string_input = $.trim($('#number').val());
+          var number_array = string_input.split(" ");
+          var arrayLength = number_array.length;
+          var string_output = ""
+          for (var i = 0; i < arrayLength; i++) {
+            var number_input = parseFloat(number_array[i]);
             var fizzbuzz_output = fizzbuzz_calc.fizzbuzz(number_input)
-            $('#display_message').html(fizzbuzz_output);
-      });
-    $("#number").keyup(function(event){
+            string_output += fizzbuzz_output + " "
+          }
+          $('#display_message').html(string_output);
+        });
+      $("#number").keyup(function(event){
       if(event.keyCode == 13){
         $("#calculate").click();
         $("#number").val('');
