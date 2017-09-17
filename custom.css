@@ -1,14 +1,13 @@
-/* label underline focus color */
 .input-field input[type=text]:focus {
   border-bottom: 1px solid white !important;
   box-shadow: 0 1px 0 0 white !important;
 }
 
-  #result {
-    padding-bottom: 30px;
-  }
+#result {
+  padding-bottom: 30px;
+}
 
-  #display_message {
-    font-size: 400%;
-    text-shadow: 2px 2px #d81b60;
-  }
+#display_message {
+  font-size: 400%;
+  text-shadow: 2px 2px #d81b60;
+}

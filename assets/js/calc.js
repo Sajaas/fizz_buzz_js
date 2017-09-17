@@ -18,15 +18,5 @@ Calc.prototype.fizzbuzz = function(number) {
   }
   else {
     return 'Didn\'t I tell you to enter an integer?'
-    //return sad_path(number);
   }
 };
-
-// function sad_path(number) {
-//   if (typeof number==='string') {
-//     return 'Enter an integer, not a string'
-//   }
-//   else {
-//     return 'Enter an integer, not a float'
-//   }
-// };
